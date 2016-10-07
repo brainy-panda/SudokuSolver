@@ -26,8 +26,6 @@ public:
   // For the initial reading in of the board, simply call this function every time
   // we encounter a new value from the input file.
 private:
-  void checkcell(int rownum, int colnum);
-  // Checks an individual cell. This should only ever be called by iterate().
   int sudoku_board[9][9];
   // Known values on the board represented as 9-by-9 matrix.
   int solved;
@@ -38,6 +36,6 @@ private:
   // for the given cell. For example, Row 2, Col 3 might have a KNOWN value of 9.
   // In that case, sudoku_possibles[1][2][9] == 1 but sudoku_possibles[1][2][n] == 0
   // for n from 1 to 8. Because only 9 is a possible candidate and no others.
-}
+};
 
 #endif
