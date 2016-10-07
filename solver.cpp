@@ -8,9 +8,7 @@ using namespace std;
 // Class Board should have member functions:
 // 1. Read the data from an external file (puzzle.csv).
 // 2. Perform a single iteration of finding new entries.
-// 2(a). Check specifically by row.
-// 2(b). Check specifically by col.
-// 2(c). Check specifically by 3x3 squares.
+// 3. Check-cell 
 // Thus, step (2) should call 2(a) 9 times, 2(b) 9 times, and 2(c) 9 times.
 // The Board should have the following attributes:
 // 1. A 9-by-9 2-d array showing the values. 0 means it is still unsolved.
