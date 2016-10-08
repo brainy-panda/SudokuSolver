@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <windows.h>
 #include "SudokuBoard.h"
 using namespace std;
 
@@ -20,7 +21,7 @@ int main() {
   // Declare Board object.
   Board sudoku;
   // First to read the file.
-  string inputfile;
+  char inputfile[80];
   cout << "Welcome to the Sudoku Solver!\n";
   cout << "Please enter the name of the file which contains the initial Sudoku board!\n";
   cout << "Enter file name: > ";
@@ -30,7 +31,6 @@ int main() {
   // Now display the board to the user.
   cout << "The initial board looks like this:\n\n";
   cout << sudoku;
-  cout << "/n";
   // Now begin solving.
   cout << "The solver is beginning to solve. Please stand by.\n";
   int iteration = 1;
@@ -39,10 +39,12 @@ int main() {
       cout << "Solver iteration " << iteration << ":\n\n";
       sudoku.iterate();
       iteration++;
+      cout << "The board now looks like this:\n\n";
       cout << sudoku;
+      Sleep(1);
     }
   // If the while loop completes, then the solver has done its dirty work.
-  cout << "Congratulations! The Sudoku Solver has successfully finishsed solving.\n";
+  cout << "Congratulations! The Sudoku Solver has successfully finished solving.\n";
   cout << "Enter anything to end this program.\n";
   char dummy;
   cin >> dummy;
