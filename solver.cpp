@@ -1,15 +1,16 @@
 #include <iostream>
 #include <cstdlib>
-#include <string>
 #include <windows.h>
-#include "SudokuBoard.h"
+#include "sudokuboard.h"
 using namespace std;
 
 // Define a class for the Sudoku Board.
 // Class Board should have member functions:
-// 1. Read the data from an external file (puzzle.csv).
-// 2. Perform a single iteration of finding new entries.
-// 3. Check-cell 
+// 1. Constructor.
+// 2. Read the data from an external file (puzzle.csv).
+// 3. Overloaded out-stream operator <<(outstream, object).
+// 4. Perform a single iteration of finding new entries.
+// 5. Eliminate possibilities after a new cell value has been entered.
 // Thus, step (2) should call 2(a) 9 times, 2(b) 9 times, and 2(c) 9 times.
 // The Board should have the following attributes:
 // 1. A 9-by-9 2-d array showing the values. 0 means it is still unsolved.
@@ -31,6 +32,7 @@ int main() {
   // Now display the board to the user.
   cout << "The initial board looks like this:\n\n";
   cout << sudoku;
+  Sleep(2000);
   // Now begin solving.
   cout << "The solver is beginning to solve. Please stand by.\n";
   int iteration = 1;
@@ -41,7 +43,7 @@ int main() {
       iteration++;
       cout << "The board now looks like this:\n\n";
       cout << sudoku;
-      Sleep(1);
+      Sleep(1000);
     }
   // If the while loop completes, then the solver has done its dirty work.
   cout << "Congratulations! The Sudoku Solver has successfully finished solving.\n";
@@ -50,4 +52,3 @@ int main() {
   cin >> dummy;
   return 0;
 }
-  

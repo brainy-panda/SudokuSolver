@@ -1,9 +1,8 @@
 // Implementation file for sudokuboard.h header.
 #include <iostream>
 #include <cstdlib>
-#include <string>
-#include <fstream>
 #include <cctype>
+#include <fstream>
 #include "sudokuboard.h"
 using namespace std;
 
@@ -36,19 +35,26 @@ void Board::read_data(const char file_name[])
       in_stream.get(next);
       // If it's a newline, move i the row indicator forward and reset the col to 0.
       // If not, it's a number from 0 to 9. Input value and shift col indicator forward.
-      if (next == '\n')
+      if (isspace(next))
 	{
 	  j=0;
 	  i++;
 	}
       else
 	{
+	  if (i > 8 || j > 8)
+	    {
+	      // Something about the text file is not as it seems and has triggered
+	      // j to increment to 9. That causes illegal memory access.
+	      continue;
+	    }
 	  cellval = (static_cast<int>(next) - static_cast<int>('0'));
 	  sudoku_board[i][j] = cellval;
 	  update_possibles(i, j, cellval);
 	  j++;
 	}
     }
+  i = 0; j = 0;
   in_stream.close();
 }
 
@@ -108,17 +114,19 @@ void Board::iterate()
       }
   // Since we have added new values, update the possibles again.
   for (i = 0; i < 9; i++)
-    for (j = 0; j < 0; j++)
+    for (j = 0; j < 9; j++)
       {
-	update_possibles(i, j, sudoku_board[i][j]);
+	int cellvalue = sudoku_board[i][j];
+	update_possibles(i, j, cellvalue);
       }
   // Update the solved attribute.
   int counter1 = 0;
   for (i = 0; i < 9; i++)
-    for (j = 0; j < 0; j++)
+    for (j = 0; j < 9; j++)
       if (sudoku_board[i][j] > 0)
 	counter1++;
   solved = counter1;
+  cout << "Total number of solved cells: " << solved << '\n';
   // Now it should be finished. In main() itself, we can output the step-wise
   // solves if we wish.
   // NOTE: slightly inefficient because we can update these things STRICTLY
@@ -189,5 +197,4 @@ void Board::update_possibles(int rownum, int colnum, int value)
 	else
 	  sudoku_possibles[i][j][value - 1] = 0;
       }
-  // Done. All possibles reduced according to the row, col, and square rules.
 }
