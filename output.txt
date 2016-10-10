@@ -1,0 +1,123 @@
+Welcome to the Sudoku Solver!
+Please enter the name of the file which contains the initial Sudoku board!
+Enter file name: > Thank you. Loading initial Sudoku board now.
+The initial board looks like this:
+
+400815600
+007003010
+800470000
+200100798
+175000246
+689007001
+000081002
+020900100
+004562003
+
+The solver is beginning to solve. Please stand by.
+Solver iteration 1:
+
+Total number of solved cells: 41
+The board now looks like this:
+
+400815600
+007003010
+800470000
+203100798
+175300246
+689007001
+000081002
+020904100
+004562003
+
+Solver iteration 2:
+
+Total number of solved cells: 49
+The board now looks like this:
+
+402815600
+007003010
+800470000
+243106798
+175390246
+689207001
+006781002
+020934100
+004562003
+
+Solver iteration 3:
+
+Total number of solved cells: 57
+The board now looks like this:
+
+402815600
+007623010
+801479000
+243156798
+175398246
+689207001
+006781052
+028934100
+004562003
+
+Solver iteration 4:
+
+Total number of solved cells: 61
+The board now looks like this:
+
+402815600
+007623010
+801479005
+243156798
+175398246
+689247031
+006781052
+028934107
+004562003
+
+Solver iteration 5:
+
+Total number of solved cells: 69
+The board now looks like this:
+
+402815679
+007623010
+801479325
+243156798
+175398246
+689247531
+006781052
+528934167
+004562083
+
+Solver iteration 6:
+
+Total number of solved cells: 74
+The board now looks like this:
+
+432815679
+907623014
+861479325
+243156798
+175398246
+689247531
+006781052
+528934167
+004562983
+
+Solver iteration 7:
+
+Total number of solved cells: 81
+The board now looks like this:
+
+432815679
+957623814
+861479325
+243156798
+175398246
+689247531
+396781452
+528934167
+714562983
+
+Congratulations! The Sudoku Solver has successfully finished solving.
+Enter anything to end this program.
