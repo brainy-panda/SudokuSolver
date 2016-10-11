@@ -4,20 +4,6 @@
 #include "sudokuboard.h"
 using namespace std;
 
-// Define a class for the Sudoku Board.
-// Class Board should have member functions:
-// 1. Constructor.
-// 2. Read the data from an external file (puzzle.csv).
-// 3. Overloaded out-stream operator <<(outstream, object).
-// 4. Perform a single iteration of finding new entries.
-// 5. Eliminate possibilities after a new cell value has been entered.
-// Thus, step (2) should call 2(a) 9 times, 2(b) 9 times, and 2(c) 9 times.
-// The Board should have the following attributes:
-// 1. A 9-by-9 2-d array showing the values. 0 means it is still unsolved.
-// 2. An integer showing how many squares are currently solved.
-// 3. A 9-by-9-by-9 3-d array showing which numbers are still POSSIBLE for a given square.
-//    Where only 1 number is possible, the square is solved and its value is set to the correct value.
-
 int main() {
   // Declare Board object.
   Board sudoku;

@@ -8,7 +8,6 @@ using namespace std;
 
 Board::Board()
 {
-  // Initializes the board to all 0s and all possibilities are 1 and solved is 0.
   solved = 0;
   for (int i = 0; i < 9; i++)
     for (int j = 0; j < 9; j++)
@@ -34,6 +33,7 @@ void Board::read_data(const char file_name[])
     {
       in_stream.get(next);
       // If it's a newline, move i the row indicator forward and reset the col to 0.
+      // Technically should be == '\n', but isspace works with this specific input file.
       // If not, it's a number from 0 to 9. Input value and shift col indicator forward.
       if (isspace(next))
 	{
@@ -44,8 +44,9 @@ void Board::read_data(const char file_name[])
 	{
 	  if (i > 8 || j > 8)
 	    {
-	      // Something about the text file is not as it seems and has triggered
-	      // j to increment to 9. That causes illegal memory access.
+	      // The eof() flag is not set until you actually pass the end, causing a final step-wise
+	      // j to increment to 9. That causes illegal memory access and weird shit happens.
+	      // Therefore, prevent that boundary case.
 	      continue;
 	    }
 	  cellval = (static_cast<int>(next) - static_cast<int>('0'));
@@ -72,7 +73,6 @@ ostream& operator <<(ostream& out_stream, const Board& the_object)
 	else
 	  out_stream << the_object.sudoku_board[i][j];
       }
-  // Extra line for nicer visuals.
   out_stream << '\n';
   return out_stream;
 }
