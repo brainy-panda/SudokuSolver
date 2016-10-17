@@ -2,6 +2,8 @@ This program solves sudoku problems. The problem should be written into the puzz
 
 Note: it cannot solve "hard" Sudoku problems in which there are bottlenecks where no particular blank cell has a unique possible value but a set of 2, 3, ... etc. cells share the same possibles and can thus eliminate others in the same row/col/square as them.
 
+Note: it turns out that my University wants to assign this as homework, so I must add the feature for solving "hard" problems. Feature coming soon!
+
 Algorithm:
 
 This solver proceeds by iteratively REMOVING POSSIBLES and POPULATING CELLS.
