@@ -1,3 +1,5 @@
+puzzle.dat
+
 Welcome to the Sudoku Solver!
 Please enter the name of the file which contains the initial Sudoku board!
 Enter file name: > Thank you. Loading initial Sudoku board now.
@@ -14,101 +16,7 @@ The initial board looks like this:
 004562003
 
 The solver is beginning to solve. Please stand by.
-Solver iteration 1:
-
-Total number of solved cells: 41
-The board now looks like this:
-
-400815600
-007003010
-800470000
-203100798
-175300246
-689007001
-000081002
-020904100
-004562003
-
-Solver iteration 2:
-
-Total number of solved cells: 49
-The board now looks like this:
-
-402815600
-007003010
-800470000
-243106798
-175390246
-689207001
-006781002
-020934100
-004562003
-
-Solver iteration 3:
-
-Total number of solved cells: 57
-The board now looks like this:
-
-402815600
-007623010
-801479000
-243156798
-175398246
-689207001
-006781052
-028934100
-004562003
-
-Solver iteration 4:
-
-Total number of solved cells: 61
-The board now looks like this:
-
-402815600
-007623010
-801479005
-243156798
-175398246
-689247031
-006781052
-028934107
-004562003
-
-Solver iteration 5:
-
-Total number of solved cells: 69
-The board now looks like this:
-
-402815679
-007623010
-801479325
-243156798
-175398246
-689247531
-006781052
-528934167
-004562083
-
-Solver iteration 6:
-
-Total number of solved cells: 74
-The board now looks like this:
-
-432815679
-907623014
-861479325
-243156798
-175398246
-689247531
-006781052
-528934167
-004562983
-
-Solver iteration 7:
-
-Total number of solved cells: 81
-The board now looks like this:
-
+The board has a solution:
 432815679
 957623814
 861479325
@@ -119,5 +27,122 @@ The board now looks like this:
 528934167
 714562983
 
-Congratulations! The Sudoku Solver has successfully finished solving.
+Enter anything to end this program.
+
+
+puzzle_easy.dat
+
+Welcome to the Sudoku Solver!
+Please enter the name of the file which contains the initial Sudoku board!
+Enter file name: > Thank you. Loading initial Sudoku board now.
+The initial board looks like this:
+
+020000400
+705003000
+010200803
+004600010
+000010000
+070009200
+301007080
+000100602
+009000050
+
+The solver is beginning to solve. Please stand by.
+The board has a solution:
+823971465
+745863129
+916245873
+594682317
+632714598
+178359246
+361527984
+457198632
+289436751
+
+Enter anything to end this program.
+
+
+puzzle_hard.dat
+
+Welcome to the Sudoku Solver!
+Please enter the name of the file which contains the initial Sudoku board!
+Enter file name: > Thank you. Loading initial Sudoku board now.
+The initial board looks like this:
+
+810006200
+000010060
+700030009
+000000000
+072000910
+000402000
+000020004
+090050000
+005008036
+
+The solver is beginning to solve. Please stand by.
+The board has a solution:
+819746253
+523819467
+764235189
+658971342
+472563918
+931482675
+186327594
+397654821
+245198736
+
+Enter anything to end this program.
+
+
+puzzle_hardest.dat
+
+Welcome to the Sudoku Solver!
+Please enter the name of the file which contains the initial Sudoku board!
+Enter file name: > Thank you. Loading initial Sudoku board now.
+The initial board looks like this:
+
+000000000
+020504070
+705000108
+060080090
+000402000
+090030050
+809000603
+050908020
+000000000
+
+The solver is beginning to solve. Please stand by.
+The board has a solution:
+914873562
+628514379
+735629148
+367185294
+581492736
+492736851
+849257613
+153968427
+276341985
+
+Enter anything to end this program.
+
+
+puzzle_impossible.dat
+
+Welcome to the Sudoku Solver!
+Please enter the name of the file which contains the initial Sudoku board!
+Enter file name: > Thank you. Loading initial Sudoku board now.
+The initial board looks like this:
+
+070006000
+900000041
+008009050
+090007002
+003000800
+400800010
+080300900
+160000007
+000500080
+
+The solver is beginning to solve. Please stand by.
+A solution could not be found.
 Enter anything to end this program.
